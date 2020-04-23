@@ -1,0 +1,305 @@
+.classView_con{
+    display: flex;
+    flex: 1;
+    padding-right: 7rem;
+    flex-direction: column;
+    margin-top: 3.5rem;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+}
+
+.classView_title{
+    display: flex;
+    text-align: right;
+    direction: rtl;
+    font-weight: 500;
+    font-size: 20;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+.goStream_con{
+    position: relative;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    align-items: center;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 5px 8px 0 rgba(49, 49, 49, 0.18);
+    display: flex;
+    flex:1;
+    flex-direction: row-reverse;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.ClassInfoSec_con{
+    margin-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.ClassViewInfo_header_img{
+    background-position: center;
+    background-size: cover;
+    height: 8rem;
+    width: 8rem;
+    border: 0.2rem solid #ccc;
+    border-radius: 5rem;
+    margin: 1rem 2rem 1rem 1rem;
+}
+
+.ClassViewInfo_header_sec1{
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.ClassViewInfo_header_sec2{
+    display: flex;
+    align-items: center;
+    direction: rtl;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    border-bottom: 0.1rem solid #ccc;
+}
+
+.ClassViewInfo_header_icon{
+    width: 0.8rem;
+    height: 0.85rem;
+    margin-left: 1rem;
+}
+
+.goStream_btn{
+    position: absolute;
+    left: 0.2rem;
+    color: white;
+    background-color: #0091EA;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 5px 8px 0.15rem rgba(9, 115, 185, 0.363);
+}
+
+.session_sec_con{
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    align-items: center;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.classView_sec_title{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: rgb(48, 48, 48);
+}
+
+.classView_under_title_line{
+    background-color: #0091EA;
+    width: 6rem;
+    height: 0.15rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.session_row_con{
+    display: flex;
+    width: 100%;
+}
+
+.session_row_right_sec{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.65rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.session_right_line{
+    position: absolute;
+    width: 0.2rem;
+    height: 100%;
+    background-color: rgb(228, 228, 228);
+}
+
+.session_right_fill{
+    position: absolute;
+    z-index: 1;
+    width: 0.4rem;
+    height: 1.4rem;
+    border-radius: 1rem;
+    top: 0.55rem;
+    background-color: rgb(182, 182, 182);
+}
+
+.session_row_left_sec{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0.4rem 0;
+    padding-left: 1.6rem;
+}
+
+.session_row_info_con{
+    position: relative;
+    display: flex;
+    direction: rtl;
+    border-radius: 0.35rem;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.2rem 1.2rem;
+    cursor: pointer;
+    color: rgb(41, 41, 41);
+    background-color: rgba(0, 144, 234, 0.342);
+}
+
+.session_lock{
+    position: absolute;
+    right: -0.2rem;
+    top:0.4rem;
+    height: 0.88rem;
+    width: 0.8rem;
+}
+
+.session_row_name{
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.session_row_name_sub{
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+}
+
+.session_row_date{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+.session_row_img{
+    max-height: 0.9rem;
+    width: 0.9rem;
+    margin-left: 0.6rem;
+}
+
+.session_content_con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 400ms ease;
+}
+
+.session_content_video{
+    height: 18rem;
+    width: 18rem;
+    background-color: black;
+    margin-top: 2rem;
+}
+
+.session_row_holder{
+    display: flex;
+}
+
+.session_row_holder_space{
+    width: 1rem;
+    height: 0.2rem;
+}
+
+@media(max-width:768px){
+
+    .classView_title{
+        padding-bottom: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .ClassViewInfo_header_img{
+        height: 5rem;
+        width: 5rem;
+        margin-right: 0.6rem;
+    }
+
+    .ClassViewInfo_header_sec1{
+        margin-right: 0rem;
+    }
+
+    .classView_con{
+        padding-right: 0rem;
+        align-items: center;
+    }
+
+    .session_row_name{
+        font-size: 0.72rem;
+    }
+    .session_row_date{
+        font-size: 0.68rem;
+    }
+
+    .goStream_btn{
+        bottom: -1rem;
+        left: 0.6rem;
+        font-size: 0.9rem;
+        padding: 0.3rem 1.6rem;
+    }
+
+    .session_row_holder{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media(min-width:769px) and (max-width:960px){
+    .classView_title{
+        margin-bottom: 0.5rem;
+        font-size: 2.2rem;
+    }
+
+    .ClassViewInfo_header_img{
+        height: 7rem;
+        width: 7rem;
+        margin-right: 1.5rem;
+    }
+
+    .ClassViewInfo_header_sec1{
+        margin-right: 0rem;
+    }
+
+    .session_row_holder{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .session_row_name{
+        font-size: 0.8rem;
+    }
+    .session_row_date{
+        font-size: 0.74rem;
+    }
+}
+
+@media(min-width:1200px){
+    
+}

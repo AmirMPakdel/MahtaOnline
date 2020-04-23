@@ -1,0 +1,100 @@
+#mytests{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3.5rem;
+}
+
+#mytests_title{
+    display: flex;
+    text-align: right;
+    direction: rtl;
+    font-weight: 500;
+}
+
+#mytests_holder{
+    display: flex;
+    flex:1;
+    flex-direction: row-reverse;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.mytests_alert_card_con{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.mytests_alert_lable{
+    height: 100%;
+    background-color: gold;
+}
+
+@media(max-width:768px){
+    #mytests_title{
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .mytests_alert_card_con{
+        height: 3.5rem;
+        border-radius: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .mytests_alert_lable{
+        width: 1.2rem;
+        margin-left: 1rem;
+    }
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    #mytests_title{
+        padding-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+    .mytests_alert_card_con{
+        height: 3.5rem;
+        border-radius: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .mytests_alert_lable{
+        width: 1.2rem;
+        margin-left: 1rem;
+    }
+}
+
+@media(min-width:1200px){
+    #mytests_title{
+        padding-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+    .mytests_alert_card_con{
+        height: 4rem;
+        border-radius: 1.4rem;
+        font-size: 0.9rem;
+    }
+
+    .mytests_alert_lable{
+        width: 1.5rem;
+        margin-left: 1rem;
+    }
+}

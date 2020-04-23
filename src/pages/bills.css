@@ -1,0 +1,173 @@
+#bills{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3.5rem;
+}
+
+#bills_title{
+    display: flex;
+    text-align: right;
+    direction: rtl;
+    font-weight: 500;
+}
+
+#bills_holder{
+    display: flex;
+    flex:1;
+    flex-direction: row-reverse;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.bills_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.bills_card_title{
+    font-weight: 500;
+}
+
+.bills_card_line{
+    background-color: #0091EA;
+}
+
+.transaction_list_con{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    direction: rtl;
+}
+
+.transaction_con{
+    width: 48%;
+    margin-top: 1.6rem;
+    background-color: rgba(19, 128, 196, 0.2);
+    overflow: hidden;
+}
+
+.transaction_title{
+    font-size: 0.9rem;
+    color: rgb(0, 0, 0);
+    padding: 0.6rem 0;
+}
+
+.transaction_row{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 2rem;
+    direction: rtl;
+    font-size: 0.9rem;
+    color: rgb(63, 63, 63);
+    border-top: 0.1rem solid white;
+}
+
+@media(max-width:768px){
+    #bills_title{
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .bills_card{
+        border-radius: 1.3rem;
+        padding: 1rem 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .bills_card_title{
+        font-size: 1rem;
+    }
+
+    .bills_card_line{
+        height: 0.15rem;
+        width: 3rem;
+        margin-top: 0.5rem;
+    }
+
+    .bills_card_nobill{
+        font-size: 0.75rem;
+        margin-top: 0.7rem;
+    }
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    #bills_title{
+        padding-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+    .bills_card{
+        border-radius: 1.3rem;
+        padding: 1rem 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .bills_card_title{
+        font-size: 1.2rem;
+    }
+
+    .bills_card_line{
+        height: 0.15rem;
+        width: 4rem;
+        margin-top: 0.5rem;
+    }
+
+    .bills_card_nobill{
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
+    }
+}
+
+@media(max-width:960px){
+
+    .transaction_con{
+        width: 100%;
+        border-radius: 0 !important;
+    }
+}
+
+@media(min-width:1200px){
+    #bills_title{
+        padding-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+    .bills_card{
+        border-radius: 1.5rem;
+        padding: 1rem 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .bills_card_title{
+        font-size: 1.4rem;
+    }
+
+    .bills_card_line{
+        height: 0.15rem;
+        width: 5rem;
+        margin-top: 0.5rem;
+    }
+
+    .bills_card_nobill{
+        font-size: 0.9rem;
+        margin-top: 0.7rem;
+    }
+}

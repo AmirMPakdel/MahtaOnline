@@ -1,0 +1,158 @@
+#dashboard_con{
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+#dashboard{
+    display: flex;
+    flex: 1;
+}
+
+#side_navigator_con{
+    position: fixed;
+    z-index: 30;
+    right:0rem;
+    top: 0;
+    bottom:0;
+    display: flex;
+    padding-top: 4.8rem;
+    justify-content: center;
+    transition: 200ms ease;
+    overflow-y: auto;
+    direction: rtl;
+    height: 100%;
+}
+
+#side_navigator_card{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    overflow: hidden;
+    direction: ltr;
+    min-height: 26rem;
+}
+
+#side_navigator_con::-webkit-scrollbar{
+    width: 0.4rem;
+}
+
+#side_navigator_con::-webkit-scrollbar-thumb{
+    background-color: #dddddd !important;
+}
+
+
+.nav_gap{
+    background-color: rgba(0,49,89,1);
+}
+
+.nav_sec{
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(0,49,89,1);
+}
+
+.nav_sec_h1{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.nav_sec_title{
+    text-align: right;
+    direction: rtl;
+    white-space: nowrap;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    margin-left: 0.6rem;
+}
+
+@media(max-width:768px){
+    #side_navigator_con{
+        font-size: 0.74rem;
+        width: 11.4rem;
+        right: -12rem;
+    }
+
+    .nav_sec{
+        height: 2.5rem;
+    }
+
+    .nav_sec_selected{
+        border-radius: 2rem 0 0 2rem;
+    }
+
+    #side_navigator_card{
+        border-radius: 1.2rem;
+    }
+
+    .nav_sec_h1{
+        width: 92%;
+    }
+
+    .nav_sec_img{
+        width: 1.1rem;
+        margin: 0rem 0.625rem;
+    }
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    #dashboard_con{
+        padding-right: 11.4rem !important;
+    }
+
+    #side_navigator_con{
+        font-size: 0.74rem;
+        width: 11.4rem;
+        right: 0rem !important;
+    }
+
+    .nav_sec{
+        height: 2.5rem;
+    }
+
+    #side_navigator_card{
+        border-radius: 1.2rem;
+    }
+
+    .nav_sec_h1{
+        width: 92%;
+    }
+
+    .nav_sec_img{
+        width: 1.1rem;
+        margin: 0rem 0.625rem;
+    }
+}
+
+@media(min-width:1200px){
+    #dashboard_con{
+        padding-right: 12.5rem !important;
+    }
+
+    #side_navigator_con{
+        font-size: 0.8rem;
+        width: 12.5rem;
+        right: 0rem !important;
+    }
+
+    .nav_sec{
+        height: 2.5rem;
+    }
+
+    #side_navigator_card{
+        border-radius: 1.5rem;
+    }
+
+    .nav_sec_h1{
+        width: 92%;
+    }
+
+    .nav_sec_img{
+        width: 1.25rem;
+        margin: 0rem 0.625rem;
+    }
+}

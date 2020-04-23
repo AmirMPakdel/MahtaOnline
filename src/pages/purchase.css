@@ -1,0 +1,201 @@
+.purchase_info_card_con{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20rem;
+    padding-bottom: 2.5rem;
+    direction: rtl;
+    border: 0.18rem solid #0091EA;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 1rem 0.1rem rgb(175, 175, 175);
+    transition: 200ms ease-in;
+    transform-origin: top right;
+}
+
+.purchase_info_card_title{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1.2rem 0;
+}
+
+.purchase_info_card_sec1{
+    display: flex;
+    width: 99.9%;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    background-color: rgba(0, 144, 234, 0.25);
+}
+
+.purchase_info_card_btn{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 1rem;
+    color:white;
+    background-color: #0091EA;
+    border-radius: 4rem;
+    bottom: -1rem;
+    padding: 0.5rem 2rem;
+    width: 75%;
+    cursor: pointer;
+    box-shadow: 0 0.2rem 1rem 0.1rem rgb(175, 175, 175);
+}
+
+.purchase_con{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 40rem;
+}
+
+.purchase_pay_btn{
+    position: relative;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    width: 20rem;
+    cursor: pointer;
+    margin-right: 7rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    transition: 200ms ease-in;
+    border: 0.1rem solid #0091EA;
+}
+
+.payment_type_sec{
+    display: flex;
+    position: absolute;
+    transition: 200ms ease-in;
+    transform-origin: top right;
+}
+
+.payment_type_sec_col{
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column-reverse;
+    width: 5rem;
+    height: 10rem;
+    margin-right: 0.7rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.payment_type_info_sec{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 7.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 0.1rem solid #0091EA;
+    overflow: hidden;
+}
+
+.payment_type_info_sub{
+    font-size: 0.76rem;
+    color: rgb(54, 54, 54);
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 144, 234, 0.25);
+}
+
+.payment_type_info_title{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    color: #222;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 0.6rem;
+    border-radius: 1.2rem;
+    background-color: white;
+    border: 0.15rem solid #0091EA;
+}
+
+.payment_type_pipe1{
+    position: absolute;
+    width: 1.6rem;
+    z-index: 0;
+    height: 4rem;
+    top: 1.8rem;
+    background-color: #0091EA;
+}
+
+.payment_type_pipe2{
+    position: absolute;
+    width: 1.6rem;
+    z-index: 0;
+    height: 4rem;
+    bottom: 1rem;
+    background-color: #0091EA;
+}
+
+.payment_type_row{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    color: #222;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 0.8rem;
+    background-color: white;
+    border: 0.15rem solid #0091EA;
+}
+
+
+.purchase_infoCard{
+    width: 80%;
+    margin: 1rem 7rem 1rem 0;
+}
+
+@media(max-width:768px){
+
+    .purchase_con{
+        align-items: center;
+    }
+
+    .purchase_pay_btn{
+        margin-right: 0rem;
+    }
+
+    .purchase_infoCard{
+        margin-right: 0;
+        width: 75%;
+        min-width: 20rem;
+    }
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    
+    .purchase_con{
+        align-items: center;
+    }
+
+    .purchase_pay_btn{
+        margin-right: 0rem;
+    }
+
+    .purchase_infoCard{
+        margin-right: 1rem;
+        width: 75%;
+    }
+}
+
+@media(min-width:1200px){
+    
+}

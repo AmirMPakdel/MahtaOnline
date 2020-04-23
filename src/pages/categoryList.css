@@ -1,0 +1,219 @@
+#course_list{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3.5rem;
+}
+
+#course_list_title{
+    display: flex;
+    text-align: right;
+    direction: rtl;
+    font-weight: 500;
+}
+
+#course_list_holder{
+    display: flex;
+    flex:1;
+    flex-direction: row-reverse;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.course_card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    cursor: pointer;
+    transition: 200ms linear;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.course_card_line{
+    background-color: #0091EA;
+}
+
+.course_card_button{
+    background-color: #0091EA;
+}
+
+.course_card_button{
+    cursor: pointer;
+    color:white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.course_card_back_img{
+    position: absolute;
+    opacity: 0.05;
+}
+
+@media(max-width:768px){
+    #course_list_title{
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0rem;
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    #course_list_holder{
+        display: flex;
+        flex:1;
+        flex-direction: row-reverse;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .course_card{
+        height: 12.5rem;
+        width: 11.6rem;
+        margin: 0.5rem 2rem 2rem 2rem;
+        border-radius: 2rem;
+    }
+
+    .course_card_title{
+        font-size: 1.25rem;
+        margin-top: 1.2rem;
+    }
+
+    .course_card_line{
+        height: 0.12rem;
+        width: 30%;
+        margin-top: 0.7rem;
+    }
+
+    .course_card_sub{
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
+    }
+
+    .course_card_img{
+        height: 3.5rem;
+        margin-top: 0.8rem;
+    }
+
+    .course_card_button{
+        position: relative;
+        top:1.2rem;
+        font-size: 0.7rem;
+        padding: 0.6rem 0.8rem;
+        border-radius: 0.6rem;
+    }
+
+    .course_card_back_img{
+        height: 6.5rem;
+        top:3.6rem;
+    }
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    #course_list_title{
+        margin-bottom: 0.5rem;
+        padding-top: 2rem;
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+    .course_card{
+        height: 12.5rem;
+        width: 11.6rem;
+        margin: 0rem 0rem 2.5rem 2rem;
+        border-radius: 2rem;
+    }
+
+    .course_card_title{
+        font-size: 1.25rem;
+        margin-top: 1.2rem;
+    }
+
+    .course_card_line{
+        height: 0.12rem;
+        width: 30%;
+        margin-top: 0.7rem;
+    }
+
+    .course_card_sub{
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
+    }
+
+    .course_card_img{
+        height: 3.5rem;
+        margin-top: 0.8rem;
+    }
+
+    .course_card_button{
+        position: relative;
+        top:1.2rem;
+        font-size: 0.7rem;
+        padding: 0.6rem 0.8rem;
+        border-radius: 0.6rem;
+    }
+
+    .course_card_back_img{
+        height: 6.5rem;
+        top:3.6rem;
+    }
+    
+}
+
+@media(min-width:1200px){
+    #course_list_title{
+        padding-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+    .course_card{
+        height: 12.5rem;
+        width: 11.6rem;
+        margin: 0rem 0rem 2.5rem 2rem;
+        border-radius: 2rem;
+    }
+
+    .course_card_title{
+        font-size: 1.25rem;
+        margin-top: 1.2rem;
+    }
+
+    .course_card_line{
+        height: 0.12rem;
+        width: 30%;
+        margin-top: 0.7rem;
+    }
+
+    .course_card_sub{
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
+    }
+
+    .course_card_img{
+        height: 3.5rem;
+        margin-top: 0.8rem;
+    }
+
+    .course_card_button{
+        position: relative;
+        top:1.2rem;
+        font-size: 0.7rem;
+        padding: 0.6rem 0.8rem;
+        border-radius: 0.6rem;
+    }
+
+    .course_card_back_img{
+        height: 6.5rem;
+        top:3.6rem;
+    }
+}
+
+.course_card:hover{
+    
+    transform: scale(1.1)
+}

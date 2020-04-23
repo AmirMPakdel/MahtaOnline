@@ -1,0 +1,133 @@
+.profile_upload_con{
+    display: flex;
+    flex:1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_upload_sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.profile_upload_pic_con{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0091EA;
+}
+
+.profile_upload_nopic{
+    position: absolute;
+    width: 22%;
+    height: auto;
+}
+
+.profile_upload_addpic_con{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color:white;
+    cursor: pointer;
+    bottom:10%;
+    padding-left: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 144, 234, 0.562);
+}
+
+.profile_upload_addicon{
+    height: 16%;
+    width: auto;
+    margin: 0.2rem 0rem 0.2rem 1rem;
+}
+
+@media(max-width:768px){
+    .profile_upload_con{
+        padding-bottom: 2rem;
+        padding-top: 0rem;
+    }
+
+    .profile_upload_sec{
+        height: 18rem;
+        width: 16.4rem;
+        margin: 0rem auto;
+        margin-top: 2rem;
+    }
+
+    .profile_upload_title{
+        font-size: 0.9rem;
+    }
+
+    .profile_upload_pic_con{
+        width: 11rem;
+        height: 11rem;
+        border-radius: 2rem;
+        margin: 0.5rem 0rem;
+    }
+
+    .profile_upload_tx{
+        font-size: 0.75rem;
+    }
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    .profile_upload_con{
+        padding-bottom: 2rem;
+        padding-top: 0rem;
+    }
+
+    .profile_upload_sec{
+        height: 20rem;
+        width: 18rem;
+        margin: 0rem auto;
+        margin-top: 2rem;
+    }
+
+    .profile_upload_title{
+        font-size: 1rem;
+    }
+
+    .profile_upload_pic_con{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 2rem;
+        margin: 0.5rem 0rem;
+    }
+
+    .profile_upload_tx{
+        font-size: 0.8rem;
+    }
+}
+
+@media(min-width:1200px){
+    .profile_upload_con{
+        padding-bottom: 2rem;
+        padding-top: 0rem;
+    }
+
+    .profile_upload_sec{
+        height: 20rem;
+        width: 18rem;
+        margin: 0rem auto;
+        margin-top: 2rem;
+    }
+
+    .profile_upload_title{
+        font-size: 1rem;
+    }
+
+    .profile_upload_pic_con{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 2rem;
+        margin: 0.5rem 0rem;
+    }
+
+    .profile_upload_tx{
+        font-size: 0.8rem;
+    }
+}

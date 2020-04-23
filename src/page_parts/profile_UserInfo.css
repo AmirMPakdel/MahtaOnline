@@ -1,0 +1,202 @@
+.user_info_header_con{
+    width: 100%;
+    overflow:  hidden !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18) !important;
+}
+
+.profile_sec_header_con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_sec_header_title_con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile_sec_header_title{
+    font-weight: 500;
+}
+
+.profile_sec_header_line{
+    background-color: #0091EA;
+}
+
+.profile_sec_header_img{
+    width: 1.4rem;
+    margin-right: 0.2rem;
+    user-select: none;
+}
+
+.user_info_input{
+    position: relative !important;
+    border-radius: 2rem !important;
+    text-align: right !important;
+    border-width: 0.1rem !important;   
+}
+
+.user_info_button{
+    position: relative !important;
+}
+
+.profile_dropdown{
+    display: flex;
+    direction: rtl;
+    justify-content: space-between;
+    border: 0.12rem #cacaca solid;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register_dropdown_item{
+    text-align: right;
+    padding: 0.8rem 1rem !important;
+    border-radius: 2rem
+}
+
+.profile_datapicker_input{
+    border: 0.15rem #cacaca solid;
+    direction: rtl;
+    border-radius: 2rem;
+    align-self: center;
+    transition: all 0.3s ease;
+}
+
+@media(max-width:768px){
+    .user_info_input{
+        margin: 0.3rem !important;
+        padding: 0.5rem 1rem !important;
+        width: 16rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .profile_sec_header_line{
+        height: 0.15rem;
+        width: 3rem;
+        position: relative;
+        margin-top: 0.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .profile_dropdown{
+        width: 16rem;
+        margin: 0.4rem auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .profile_datapicker_input{
+        width: 16rem;
+        margin: 0.3rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .user_info_button{
+        right: 0px !important;
+        position: relative !important;
+        width: 40% !important;
+        height: auto !important;
+        padding: 0.6rem  0 !important;
+        border-radius: 0.4rem !important;
+        margin: 1.5rem 0 0.5rem 0!important;
+    }
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    .user_info_input{
+        margin: 0.3rem !important;
+        padding: 0.65rem 2rem !important;
+        width: 24rem !important;
+    }
+
+    .profile_sec_header_line{
+        height: 0.2rem;
+        width: 4rem;
+        position: relative;
+        margin-top: 0.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .user_info_button{
+        right: 0px !important;
+        position: relative !important;
+        width: 40% !important;
+        height: auto !important;
+        padding: 0.6rem  0 !important;
+        border-radius: 0.4rem !important;
+        margin: 1.5rem 0 0.5rem 0!important;
+    }
+
+    .profile_dropdown{
+        margin: 0.6rem auto;
+        padding: 0.7rem 1.8rem;
+        width: 24rem;
+    }
+
+    .profile_datapicker_input{
+        width: 24rem;
+        margin: 0.6rem auto;
+        padding: 0.7rem 1.8rem;
+    }
+}
+
+@media(min-width:1200px){
+    .profile_sec_header_title{
+        font-size: 1.2rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .profile_sec_header_line{
+        height: 0.2rem;
+        width: 4rem;
+        position: relative;
+        margin-top: 0.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .user_info_input{
+        margin: 0.3rem !important;
+        padding: 0.65rem 2rem !important;
+        width: 90% !important;
+    }
+
+    .user_info_button{
+        position: relative !important;
+        width: 40% !important;
+        height: auto !important;
+        padding: 0.6rem  0 !important;
+        border-radius: 0.4rem !important;
+        margin: 1rem 0 0.5rem 0!important;
+    }
+
+    .profile_dropdown{
+        width: 90%;
+        margin: 0.6rem auto;
+        padding: 0.7rem 1.8rem;
+    }
+
+    .profile_datapicker_input{
+        width: 90%;
+        margin: 0.6rem auto;
+        padding: 0.7rem 1.8rem;
+    }
+}
+
+.profile_dropdown:hover{
+    border-color: rgb(13, 162, 255) !important;
+}
+
+.profile_datapicker_input:hover{
+    border-color: rgb(13, 162, 255) !important;
+}
+.profile_datapicker_input:focus{
+    outline: none;
+}
+
+.profile_datapicker_input::placeholder{
+    opacity: 0.5;
+}
