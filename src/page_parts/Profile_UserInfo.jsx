@@ -158,6 +158,13 @@ class Profile_UserInfo extends Component {
     return(
         <Collapse bordered defaultActiveKey={['1']} className="user_info_header_con">
             <Collapse.Panel header={<Header complete={this.props.complete} title="اطلاعات تکمیلی"/>} key="1">
+
+                <div style={{display:'flex',justifyContent:'center'}}>
+                <div className="user_info_refer_code">
+                    <div>{"کد معرف دانش آموز"}</div>
+                    <div style={{fontFamily:"monospace"}}>{this.state.user_data.student_refer_code}</div>
+                </div>
+                </div>
                 
                 <Form.Item hasFeedback  validateStatus={this.state.first_name_stat}>
                     <Input placeholder="نام" onChange={this.onFirstName} 

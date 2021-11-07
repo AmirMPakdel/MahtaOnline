@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import './profile.css';
 import Profile_UserInfo from '../page_parts/Profile_UserInfo';
 import Profile_Upload from '../page_parts/Profile_Upload';
 import Profile_Password from '../page_parts/Profile_Password';
 import {Breadcrumb} from 'antd';
 import {HomeOutlined} from '@ant-design/icons';
+import Controller from '../Controller';
 
 class Profile extends Component {
 
@@ -14,10 +15,14 @@ class Profile extends Component {
     }
 
     render() {
+        let profile_title = "اطلاعات دانش آموزی خود را کامل کنید";
+        if(Controller.is_profile_completed){
+            profile_title = "اطلاعات شخصی";
+        }
         return (
             <div id="profile">
                 
-                <div id="profile_title">{"اطلاعات شخصی"}</div>
+                <div id="profile_title">{profile_title}</div>
 
                 <div className="Breadcrumb_con">
                     <Breadcrumb separator="/">

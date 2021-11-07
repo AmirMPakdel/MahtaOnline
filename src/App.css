@@ -37,8 +37,9 @@ a:active{
 }
 
 a.ant-breadcrumb-link{
-	padding-bottom: 0.3rem !important;
-	border-bottom: 0.095rem solid #0091EA;
+	padding-bottom: 0.05rem !important;
+	line-height: 2.5 !important;
+	border-bottom: 0.01rem solid #0091EA;
 }
 
 ::-webkit-scrollbar {
@@ -80,76 +81,6 @@ a.ant-breadcrumb-link{
 .ant-spin-dot-item{
 	height: 4rem !important;
 	width: 4rem !important;
-}
-
-@font-face {
-	font-family: IranSans;
-	font-style: normal;
-	font-weight: 900;
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/0cbe440.eot);
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/0cbe440.eot#iefix)
-			format("embedded-opentype"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/3d58553.woff2)
-			format("woff2"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/6e6d05b.woff) format("woff"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/879c6f0.ttf)
-			format("truetype");
-}
-
-@font-face {
-	font-family: IranSans;
-	font-style: normal;
-	font-weight: 700;
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/cacb945.eot);
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/cacb945.eot#iefix)
-			format("embedded-opentype"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/924be0f.woff2)
-			format("woff2"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/6ed6ddf.woff) format("woff"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/cf91637.ttf)
-			format("truetype");
-}
-
-@font-face {
-	font-family: IranSans;
-	font-style: normal;
-	font-weight: 500;
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/5a25001.eot);
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/5a25001.eot#iefix)
-			format("embedded-opentype"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/8451859.woff2)
-			format("woff2"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/32cc237.woff) format("woff"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/caa93b1.ttf)
-			format("truetype");
-}
-
-@font-face {
-	font-family: IranSans;
-	font-style: normal;
-	font-weight: 300;
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/fe61680.eot);
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/fe61680.eot#iefix)
-			format("embedded-opentype"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/d11c490.woff2)
-			format("woff2"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/74955f1.woff) format("woff"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/1604933.ttf)
-			format("truetype");
-}
-
-@font-face {
-	font-family: IranSans;
-	font-style: normal;
-	font-weight: 400;
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/07e13ce.eot);
-	src: url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/07e13ce.eot#iefix)
-			format("embedded-opentype"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/38d4b5f.woff2)
-			format("woff2"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/d4bb655.woff) format("woff"),
-		url(https://cdn.alibaba.ir/dist/92ac74c4/fonts/a5080d9.ttf)
-			format("truetype");
 }
 
 .Breadcrumb_con{
@@ -203,3 +134,39 @@ a.ant-breadcrumb-link{
 		font-size: 1.1rem !important;
 	}
 }
+
+
+/* @font-face {
+	font-family: amp_sans;
+	font-style: normal;
+	font-weight: 300;
+	src: url(assets/fonts/iran_sans_300.woff) format("woff");
+}
+
+@font-face {
+	font-family: amp_sans;
+	font-style: normal;
+	font-weight: 400;
+	src: url(assets/fonts/iran_sans_400.woff) format("woff");
+}
+
+@font-face {
+	font-family: amp_sans;
+	font-style: normal;
+	font-weight: 500;
+	src: url(assets/fonts/iran_sans_500.woff) format("woff");
+}
+
+@font-face {
+	font-family: amp_sans;
+	font-style: normal;
+	font-weight: 700;
+	src: url(assets/fonts/iran_sans_700.woff) format("woff");
+}
+
+@font-face {
+	font-family: amp_sans;
+	font-style: normal;
+	font-weight: 900;
+	src: url(assets/fonts/iran_sans_900.woff) format("woff");
+} */

@@ -1,11 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "مدرسه آنلاین مهتا",
+  "name": "آموزشگاه مجازی مهتا",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "sizes": "64x64"
     },
     {
       "src": "logo192.png",
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://online.mahtaschool.ir/dashboard",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#003056",
   "background_color": "#ffffff"
 }

@@ -1,0 +1,47 @@
+#mtest_flt_dlg_con{
+    max-height: calc(100vh - 14rem);
+    overflow-y: auto;
+    direction: ltr;
+}
+
+#mtest_flt_dlg_wrapper{
+    display: flex;
+    width: 100%;
+    direction: rtl;
+    flex-direction: column;
+    text-align: right;
+    overflow-x: hidden;
+    padding-right: 1rem;
+}
+
+.mtest_flt_dlg_title{
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: rgb(24, 24, 24);
+}
+
+#mtest_flt_dlg_date_con{
+    margin-top: 00.3rem;
+    margin-bottom: 0.2rem;
+}
+
+.mtest_flt_dlg_input_day,
+.mtest_flt_dlg_input_year{
+    width: 2.4rem;
+    outline: none;
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+}
+
+.mtest_flt_dlg_input_year{
+    width: 3.8rem;
+}
+
+.mtest_flt_dlg_input_day::placeholder,
+.mtest_flt_dlg_input_year::placeholder{
+    font-size: 0.8rem;
+    color: rgb(187, 187, 187);
+}

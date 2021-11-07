@@ -12,6 +12,7 @@ export default class Header extends Component {
     Controller.hideBackdrop = this.hideBackdrop;
 
     window.addEventListener("scroll", (obj) => {
+      if(!this.HomeBar_con)return
       if (document.scrollingElement.scrollTop < 10) {
         this.HomeBar_con.style.boxShadow = "none";
       } else {
@@ -78,11 +79,12 @@ function Backdrop(props) {
         onClick={props.onClick}
         style={{
           position: "fixed",
+          top:0,
           zIndex: 20,
           width: "100vw",
           height: "100vh",
           background: "black",
-          opacity: 0.75,
+          opacity: 0.92,
         }}
       ></div>
     );

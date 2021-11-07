@@ -103,6 +103,12 @@
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18);
 }
 
+.session_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .classView_sec_title{
     font-size: 1.2rem;
     margin-top: 1rem;
@@ -119,7 +125,8 @@
 
 .session_row_con{
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin-left: 2rem;
 }
 
 .session_row_right_sec{
@@ -154,6 +161,7 @@
     flex: 1;
     flex-direction: column;
     padding: 0.4rem 0;
+    width: 100%;
     padding-left: 1.6rem;
 }
 
@@ -181,6 +189,7 @@
 .session_row_name{
     display: flex;
     align-items: center;
+    text-align: right;
     font-size: 0.9rem;
 }
 
@@ -197,9 +206,9 @@
 }
 
 .session_row_img{
-    max-height: 0.9rem;
-    width: 0.9rem;
-    margin-left: 0.6rem;
+    max-height: 0.7rem;
+    width: 0.7rem;
+    margin-left: 0.4rem;
 }
 
 .session_content_con{
@@ -212,13 +221,6 @@
     transition: 400ms ease;
 }
 
-.session_content_video{
-    height: 18rem;
-    width: 18rem;
-    background-color: black;
-    margin-top: 2rem;
-}
-
 .session_row_holder{
     display: flex;
 }
@@ -228,11 +230,128 @@
     height: 0.2rem;
 }
 
+.session_content_links_con{
+    display: flex;
+    font-weight: 500;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    justify-content: space-evenly;
+}
+
+.session_video_download_btn{
+    height: 2.5rem;
+    width: 12rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0px 2px 8px 5px rgba(0, 111, 214, 0.5);
+}
+
+.session_file_download_btn{
+    height: 2.5rem;
+    width: 12rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    background-color: #0091EA;
+    box-shadow: 0px 6px 8px 3px rgba(39, 41, 44, 0.2);
+}
+
+.session_info_con{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 34rem;
+    margin-top: 1.5rem;
+}
+
+.sesstion_info_line{
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 1rem;
+    background-color: #ddd;
+}
+
+.session_info_text{
+    width: 95%;
+    margin-top: 1rem;
+    direction: rtl;
+    text-align: justify;
+    font-size: 0.85rem;
+    color: #333;
+    padding-bottom: 1rem;
+}
+
+.note_download_btn{
+    margin: 0.1rem 0rem;
+    padding: 0.1rem 1.8rem;
+    font-size: 0.88rem;
+    width: fit-content;
+    background-color: rgb(0,49, 89);
+    color:white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.class_modal_con{
+
+    width: 42rem !important;
+}
+
+.session_modal_con{
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 72vh !important;
+}
+
+.session_modal_open_tabvideo{
+    background-color: #0091EA;
+    color: white;
+    font-family: iransans;
+    margin: 1rem;
+    padding: 0.3rem 1.2rem;
+    padding-bottom: 0.4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: ease 200ms;
+    box-shadow: 1px 0 1rem 0.1rem rgba(0, 0, 0, 0.18);
+}
+.session_modal_open_tabvideo:active{
+    transform: scale(0.9);
+}
+
+.session_row_show{
+    height: 1.2rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem 0.3rem;
+    margin-right: 0.5rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.74rem;
+    background-color: rgb(0,49, 89);
+}
+
 @media(max-width:768px){
 
     .classView_title{
         padding-bottom: 0.5rem;
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .ClassViewInfo_header_img{
@@ -269,6 +388,48 @@
         flex-direction: column;
     }
 
+    .session_content_links_con{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .session_video_download_btn{
+        height: 2.3rem;
+        width: 12rem;
+        font-size: 0.9rem;
+    }
+    
+    .session_file_download_btn{
+        height: 2.2rem;
+        width: 12rem;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .session_info_con{
+        width: 90%;
+        margin-top: 1.5rem;
+    }
+
+    .session_info_text{
+        width: 90%;
+        padding: 0 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .session_row_left_sec{
+        min-width: 17.5rem;
+    }
+
+    .class_modal_con{
+        /* width: 24rem !important; */
+        width: 96vw !important;
+        max-width: 42rem !important;
+    }
+    .class_modal_con .ant-modal-body{
+        padding: 0.5rem;
+    }
+
 }
 
 @media(min-width:769px) and (max-width:960px){
@@ -287,6 +448,10 @@
         margin-right: 0rem;
     }
 
+    .session_row_left_sec{
+        min-width: 22rem;
+    }
+
     .session_row_holder{
         display: flex;
         flex-direction: column;
@@ -296,10 +461,70 @@
         font-size: 0.8rem;
     }
     .session_row_date{
-        font-size: 0.74rem;
+        font-size: 0.7rem;
+    }
+
+    .session_content_links_con{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .session_video_download_btn{
+        height: 2.3rem;
+        width: 12rem;
+        font-size: 0.9rem;
+    }
+    
+    .session_file_download_btn{
+        height: 2.2rem;
+        width: 12rem;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .session_info_con{
+        width: 22rem;
+        margin-top: 1.5rem;
+    }
+
+    .class_modal_con{
+        width: 32rem !important;
     }
 }
 
-@media(min-width:1200px){
-    
+@media(min-width:961px) and (max-width:1199px){
+    .session_info_con{
+        width: 28rem;
+        margin-top: 1.5rem;
+    }
+
+    .class_modal_con{
+        width: 32rem !important;
+    }
+}
+
+.ClassViewInfo_con{
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    width: 80%;
+    box-shadow: 0 5px 8px 0 rgba(49, 49, 49, 0.18);
+    flex-direction: column;
+}
+
+.ClassViewInfo_holder{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.ClassViewInfo_line1{
+    height: 0.05rem;
+    width: 75%;
+    background-color: rgb(223, 223, 223);
+    margin-bottom: 2rem;
+    margin-top: 0.1rem;
+    align-self: center;
 }

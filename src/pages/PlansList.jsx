@@ -6,15 +6,27 @@ import { Menu, Dropdown, Button, Breadcrumb } from 'antd';
 import {DownOutlined, HomeOutlined} from '@ant-design/icons'
 import Controller from '../Controller';
 import CategoryList from './CategoryList';
+import Purchase from './Purchase';
 
 export default class PlansList extends Component {
     
     state = {planList:[], selectedPlan:undefined,
-    grade_filter:"null", field_filter:"null", teacher_filter:"null"}
+    grade_filter:"null", field_filter:"null", tag_filter:"null"}
 
     componentDidMount(){
-
+        window.location.hash = "planslist";
+        window.addEventListener("hashchange", this.onHashChange);
         this.getList(this.props.category.id, "null", "null", "null");
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener("hashchange", this.onHashChange);
+    }
+
+    onHashChange = ()=>{
+        if(window.location.hash == "#categorylist"){
+            this.BackToCategoryList();
+        }
     }
 
     getList = (category_id, tag_id, grade_id, field_id)=>{
@@ -29,12 +41,18 @@ export default class PlansList extends Component {
         });
     }
 
-    onSelect = (data)=>{
+    onMoreInfo = (data)=>{
         
         Controller.setPage(
-            <div id="course_list">
-                <ViewPlan plan={data} category={this.props.category}/>
-            </div>,
+            <ViewPlan plan={data} category={this.props.category}/>,
+            1
+        )
+    }
+
+    onBuy = (data)=>{
+
+        Controller.setPage(
+            <Purchase plan={data}/>,
             1
         )
     }
@@ -71,7 +89,7 @@ export default class PlansList extends Component {
             <div className="view_courses_card_list">
             {
                 this.state.planList.map((v,i)=>(
-                    <PlanCard key={`cc${i}`} data={v} onClick={this.onSelect}/>
+                    <PlanCard key={`cc${i}`} data={v} onBuy={this.onBuy} onMoreInfo={this.onMoreInfo}/>
                 ))
             }
             </div>
@@ -95,8 +113,8 @@ class Filters extends Component{
     componentDidMount(){
 
         Controller.getConsts((data)=>{
-            this.state.grade_list = data.grade_list;
-            this.state.field_list = data.field_list;
+            this.state.grade_list = Object.assign([],data.grade_list);
+            this.state.field_list = Object.assign([],data.field_list);
             this.state.grade_list.unshift({id:"null", title:"همه پایه ها"});
             this.state.field_list.unshift({id:"null", title:"همه رشته ها"});
             this.state.tag_list.unshift({id:"null", title:"همه دروس"});
@@ -116,24 +134,24 @@ class Filters extends Component{
     return(
         <div className="view_courses_filter">
 
-            <Dropdown overlay={<FilterMenu list={field_list} onSelect={(v)=>{this.onSelect(v,"field")}}/>} placement="bottomLeft">
+            <Dropdown trigger={['click']} overlay={<FilterMenu list={field_list} onSelect={(v)=>{this.onSelect(v,"field")}}/>} placement="bottomLeft">
                 <Button className="view_courses_filter_btn">
                     {this.state.field_filter.title}
                     <DownOutlined/>
                 </Button>
             </Dropdown>
-            <Dropdown overlay={<FilterMenu list={grade_list} onSelect={(v)=>this.onSelect(v,"grade")}/>} placement="bottomLeft">
+            <Dropdown trigger={['click']} overlay={<FilterMenu list={grade_list} onSelect={(v)=>this.onSelect(v,"grade")}/>} placement="bottomLeft">
                 <Button className="view_courses_filter_btn">
                     {this.state.grade_filter.title}
                     <DownOutlined/>
                 </Button>
             </Dropdown>
-            <Dropdown overlay={<FilterMenu list={tag_list} onSelect={(v)=>this.onSelect(v,"teacher")}/>} placement="bottomLeft">
+            {/* <Dropdown overlay={<FilterMenu list={tag_list} onSelect={(v)=>this.onSelect(v,"tag")}/>} placement="bottomLeft">
                 <Button className="view_courses_filter_btn">
-                    {this.state.teacher_filter.title}
+                    {this.state.tage_filter.title}
                     <DownOutlined/>
                 </Button>
-            </Dropdown>
+            </Dropdown> */}
 
         </div>
     )}
@@ -164,20 +182,31 @@ function FilterMenu(props){
 function PlanCard(props){
 
     return(
-        <div className="view_courses_card_con" onClick={()=>props.onClick(props.data)}>
+        <div className="view_courses_card_con">
 
-            <img className="view_courses_card_img" src={Server.img_png("view_course_card")}/>
+            <img className="view_courses_card_img" src={Server.urls.DBFILE+props.data.cover}/>
 
             <div className="view_courses_card_title">{props.data.title}</div>
-            <div className="view_courses_card_sub">{"رشته"+ " : "+ "تجربی"}</div>
-            <div className="view_courses_card_sub">{"پایه"+ " : "+ "تجربی"}</div>
+            <div className="view_courses_card_sub">{"رشته"+ " : "+ props.data.field}</div>
+            <div className="view_courses_card_sub">{"پایه"+ " : "+ props.data.grade}</div>
             {/* <div className="view_courses_card_sub">{"قیمت"+ " : "+ "450000"}</div> */}
 
             <div className="view_courses_card_btn_con">
-                <div className="view_courses_card_right">{"جزئیات"}</div>
-                <div className="view_courses_card_left">{"ثبت نام"}</div>
+                <div className="view_courses_card_right" 
+                onClick={()=>props.onMoreInfo(props.data)}>{"نمایش جزئیات طرح"}</div>
+                {/* <div className="view_courses_card_left" 
+                onClick={()=>props.onBuy(props.data)}>{"ثبت نام"}</div> */}
             </div>
 
+            {
+                props.data.is_free && !props.data.is_full?
+                <div className="view_course_card_free_tag">{"رایگان"}</div>:null
+            }
+            {
+                props.data.is_full?
+                <div className="view_course_card_full_tag">{"تکمیل ظرفیت"}</div>:null
+            }
+            
         </div>
     )
 }

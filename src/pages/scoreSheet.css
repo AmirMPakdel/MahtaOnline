@@ -1,0 +1,143 @@
+.scoreSheet{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    
+    padding-bottom: 3rem;
+}
+
+.ssheet_title{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #232323;
+    display: flex;
+    direction: rtl;
+    padding-right: 4rem;
+    margin-top: 4.5rem;
+    margin-bottom: -1rem;
+}
+
+.ssheet_wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+    margin-right: 4rem;
+}
+
+.ssheet_selection_con{
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    width: 15rem;
+    margin-right: 7rem;
+}
+
+
+.ssheet_cselect_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    margin: 1rem;
+    margin-right: 0;
+    padding: 0.6rem 1rem;
+    border-radius: 0.6rem;
+    font-weight: 500;
+    color: black;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+
+.ssheet_card{
+    display: flex;
+    width: 30rem;
+    align-items: center;
+    margin-top: 1rem;
+    flex-direction: column;
+}
+
+.sscroe_row{
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    width: 100%;
+    color: #333;
+    max-width: 20rem;
+    border-bottom: 0.1rem solid #0091EA;
+}
+
+.sscore_row_title{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 0.1rem solid #0091EA;
+    border-right: 0.1rem solid #0091EA;
+}
+
+.sscore_row_info{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 0.1rem solid #0091EA;
+}
+
+@media(max-width:768px){
+
+    .scoreSheet{
+        width: 100%;
+    }
+
+    .ssheet_title{
+        font-size: 1.4rem;
+        margin-top: 7rem;
+    }
+
+    .ssheet_wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ssheet_selection_con{
+        width: 80%;
+        height: auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-right: 0rem;
+    }
+
+    .ssheet_cselect_btn{
+        width: 45%;
+        height: 3rem;
+    }
+
+    .ssheet_card{
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+}
+
+@media(min-width:769px) and (max-width:1199px){
+
+    .ssheet_selection_con{
+        
+        margin-right: 1rem;
+    }
+    
+    .ssheet_card{
+        display: flex;
+        width: 24rem;
+        align-items: center;
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+}

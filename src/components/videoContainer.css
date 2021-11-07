@@ -1,0 +1,70 @@
+.video_con_con{
+    position: relative;
+    width: 35rem;
+    height: 22.4rem;
+    margin-top: 2rem;
+    background-color: black;
+}
+
+.r1_iframe_embed { 
+    position: relative;
+    width: 35rem;
+    height: 22.4rem;
+    /* padding-top: 56.25%;  */
+} 
+
+.r1_iframe_embed iframe { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 35rem;
+    height: 22.4rem;
+    border: 0;
+}
+
+@media(max-width:768px){
+
+    .video_con_con{
+        height: 20rem;
+        min-width: 360px;
+        width: 92vw;
+        max-width: 92vw;
+    }
+    
+    .r1_iframe_embed {
+        /* width: 17.5rem;
+        height: 11.2rem; */
+        height: 100%;
+        min-width: 360px;
+        width: 92vw;
+        max-width: 92vw;
+    } 
+
+    .r1_iframe_embed iframe { 
+        /* width: 17.5rem;
+        height: 11.2rem; */
+        height: 100%;
+        min-width: 356px;
+        width: 92vw;
+        max-width: 92vw;
+    }
+
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    
+    .video_con_con{
+        width: 25rem;
+        height: 16rem;
+    }
+    
+    .r1_iframe_embed { 
+        width: 25rem;
+        height: 16rem;
+    } 
+
+    .r1_iframe_embed iframe { 
+        width: 25rem;
+        height: 16rem;
+    }
+}

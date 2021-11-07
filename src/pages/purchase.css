@@ -68,7 +68,9 @@
 
 .payment_type_sec{
     display: flex;
+    flex-direction: row-reverse;
     position: absolute;
+    width: 22rem;
     transition: 200ms ease-in;
     transform-origin: top right;
 }
@@ -92,7 +94,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 7.5rem;
+    height: 5rem;
     border-radius: 1rem;
     background-color: white;
     border: 0.1rem solid #0091EA;
@@ -103,7 +105,7 @@
     font-size: 0.76rem;
     color: rgb(54, 54, 54);
     width: 100%;
-    height: 30%;
+    height: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,6 +115,7 @@
 .payment_type_info_title{
     position: relative;
     z-index: 2;
+    font-size: 0.78rem;
     display: flex;
     color: #222;
     justify-content: center;
@@ -130,7 +133,7 @@
     width: 1.6rem;
     z-index: 0;
     height: 4rem;
-    top: 1.8rem;
+    top: 3.5rem;
     background-color: #0091EA;
 }
 

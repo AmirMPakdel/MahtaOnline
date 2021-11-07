@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './inprogressTransaction.css';
-import {Dropdown, Button} from 'antd'
+import {Dropdown, Button} from 'antd';
+import {number2Fa, priceNum} from '../scripts/persianNum';
+import Server from '../Server';
+import { getCookie } from '../scripts/cookie';
 
 export default class InprogressTransaction extends Component {
     constructor(props) {
@@ -37,29 +40,35 @@ export default class InprogressTransaction extends Component {
         
     }
 
+    onPayInstalment = (installment_id)=>{
+        
+        let token = getCookie("_ca");
+        window.location.href = `/api/installment/pay/${token}/${installment_id}`;
+    }
+
     render() {
         return (
             <div className="in_transaction_con">
                 
-                <div className="in_transaction_title_button" onClick={this.onSelect}>{"درس شیمی"}</div>
+                <div className="in_transaction_title_button" onClick={this.onSelect}>{this.props.title}</div>
 
                 
                 <div className="in_transaction_subtrans_con" ref={r=>this.trans_con=r}>
                 <div ref={r=>this.wrapper=r}>
                     {
-                        [{},{},{},{},{},{},{}].map((v,i)=>{
+                        this.props.list.reverse().map((v,i)=>{
 
                             let s={borderColor:"gold"};
                             let payed = false;
-                            if(i%2){
+                            if(!v.transaction_id){
                                 payed = true;
                                 s={borderColor:"#0091EA"};
                             }
 
                             return(
-                            <Dropdown overlay={<TransactionInfoCard payed={payed}/>} placement="bottomCenter">
+                            <Dropdown key={`tic${i}`} overlay={<TransactionInfoCard data={v} onPayInstalment={this.onPayInstalment}/>} placement="bottomCenter">
                                 <Button className="trans_installment_title" style={s}>
-                                    {"قسط اول"}
+                                    {v.number != 1?"قسط "+number2Fa(v.number):"پیش پرداخت"}
                                 </Button>
                             </Dropdown>
                             )
@@ -76,21 +85,21 @@ export default class InprogressTransaction extends Component {
 
 function TransactionInfoCard(props){
 
-    if(!props.payed){
+    if(!props.data.transaction_id){
         return(
             <div className="trans_info_card_con">
 
                 <div className='trans_info_card_row'>
-                    <div>{"350000 تومان"}</div>
-                    <div>{"میلغ قسط"}</div>
+                    <div>{priceNum(props.data.amount)+" تومان "}</div>
+                    <div>{"مبلغ قسط"}</div>
                 </div>
 
                 <div className='trans_info_card_row'>
-                    <div>{"350000 تومان"}</div>
+                    <div>{props.data.year+"/"+props.data.month+"/"+props.data.day}</div>
                     <div>{"موعد پرداخت"}</div>
                 </div>
 
-                <div className="trans_info_card_btn">{"پرداخت اینترنتی"}</div>
+                <div className="trans_info_card_btn" onClick={()=>this.onPayInstalment(props.data.id)}>{"پرداخت اینترنتی"}</div>
     
             </div>
         )
@@ -99,12 +108,12 @@ function TransactionInfoCard(props){
             <div className="trans_info_card_con">
 
                 <div className='trans_info_card_row'>
-                    <div>{"350000 تومان"}</div>
+                    <div>{priceNum(props.data.amount)+" تومان "}</div>
                     <div>{"میلغ قسط"}</div>
                 </div>
 
                 <div className='trans_info_card_row'>
-                    <div>{"350000 تومان"}</div>
+                    <div>{props.data.year+"/"+props.data.month+"/"+props.data.day}</div>
                     <div>{"تاریخ پرداخت"}</div>
                 </div>
 
@@ -112,6 +121,6 @@ function TransactionInfoCard(props){
     
             </div>
         )
-    }
-    
+    }   
 }
+

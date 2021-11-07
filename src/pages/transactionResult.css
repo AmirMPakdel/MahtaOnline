@@ -1,0 +1,79 @@
+.transult_con{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+
+.transult_t1{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgb(37, 37, 37);
+}
+
+.transult_img{
+    margin-top: 1rem;
+    height: 8rem;
+    width: auto;
+    margin: 1rem;
+}
+
+.transult_card_holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: white;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    min-width: 22rem;
+    width: 45%;
+    max-width: 34rem;
+    color: rgb(37, 37, 37);
+    box-shadow: 0 0 4rem 0.1rem rgb(161, 161, 161);
+}
+
+.transult_card_title{
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+.transult_row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.4rem 1.5rem;
+    border-top: 0.07rem solid rgb(37, 37, 37);;
+}
+
+.transult_back{
+    color: rgb(38, 126, 209);
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 0.1rem solid rgb(38, 126, 209);
+}
+
+@media(max-width:768px){
+
+    .transult_img{
+        height: 6rem;
+    }
+
+    .transult_card_holder{
+        font-size: 0.8rem;
+    }
+
+    .transult_back{
+        font-size: 1.1rem;
+    }
+}
+
+@media(min-width:769px) and (max-width:1199px){
+    
+}

@@ -11,11 +11,13 @@ class CourseList extends Component {
     state={categoryList:[], selectedCategory:undefined}
 
     componentDidMount(){
-
+        window.location.hash = "categorylist";
         Server.get_request(Server.urls.GET_CATEGORY_LIST, (res)=>{
 
             if(res.result_code == Server.ResultCode.SUCCESS){
                 this.state.categoryList = res.data;
+                console.log(res.data);
+                
                 this.setState(this.state);
             }
         })
@@ -73,6 +75,11 @@ class CourseList extends Component {
 
 function CourseCard(props){
 
+    let sub = props.sub_title;
+    if(!sub){ 
+        sub = <div style={{height:'1.6rem'}}></div>
+    }
+
     return(
         <div className="course_card" onClick={()=>{props.onSelect(props.title)}}>
 
@@ -80,13 +87,13 @@ function CourseCard(props){
 
             <div className="course_card_line"/>
 
-            <div className="course_card_sub">{props.sub_title}</div>
+            <div className="course_card_sub">{sub}</div>
 
-            <img className="course_card_img" src={props.img}/>
+            <img className="course_card_img" src={Server.urls.DBFILE+props.img}/>
 
             <div className="course_card_button">{"مشاهده لیست دروس"}</div>
 
-            <img className="course_card_back_img" src={props.img}/>
+            <img className="course_card_back_img" src={Server.urls.DBFILE+props.img}/>
 
         </div>
     )

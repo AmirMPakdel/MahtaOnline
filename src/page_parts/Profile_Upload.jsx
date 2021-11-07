@@ -22,10 +22,12 @@ class Profile_Upload extends Component {
     Server.post_request(Server.urls.GET_PROFILE, {token}, (res)=>{
       if(res.result_code == Server.ResultCode.SUCCESS){
         if(res.data.national_card_image){
-          this.state.kartmeli_img = res.data.national_card_image
+          this.state.kartmeli_img_empty = false;
+          this.state.kartmeli_img = Server.urls.DBFILE+res.data.national_card_image
         }
         if(res.data.enrollment_certificate_image){
-          this.state.govahi_img = res.data.enrollment_certificate_image;
+          this.state.govahi_img_empty = false;
+          this.state.govahi_img = Server.urls.DBFILE+res.data.enrollment_certificate_image;
         }
         this.setState(this.state);
       }
@@ -48,7 +50,7 @@ class Profile_Upload extends Component {
                 let formData = new FormData();
                 formData.append("token", getCookie("_ca"));
                 formData.append("image", file);
-                formData.append("action", "create");//TODO:
+                formData.append("action", "create");
                 Axios.post(Server.domain+Server.urls.UPLOAD_NCI, formData).then(res=>{
                   
                   let {data} = res;
@@ -84,7 +86,7 @@ class Profile_Upload extends Component {
               let formData = new FormData();
                 formData.append("token", getCookie("_ca"));
                 formData.append("image", file);
-                formData.append("action", "create");//TODO:
+                formData.append("action", "create");
                 Axios.post(Server.domain+Server.urls.UPLOAD_ECI, formData).then(res=>{
                   
                   let {data} = res;

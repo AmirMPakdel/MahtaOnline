@@ -1,0 +1,14 @@
+.loader {
+  
+  border-radius: 10rem;
+  border-top: 0.6rem solid #3498db;
+  border-right: 0.5rem solid transparent;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 800ms linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

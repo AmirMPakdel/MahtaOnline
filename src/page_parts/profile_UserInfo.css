@@ -66,12 +66,27 @@
     transition: all 0.3s ease;
 }
 
+.user_info_refer_code{
+    display: flex;
+    flex-direction: row-reverse;
+    align-self:flex-end;
+    font-size: 1.1rem;
+    width: 88%;
+    padding: 0.5rem 0;
+    justify-content: space-between;
+}
+
 @media(max-width:768px){
     .user_info_input{
         margin: 0.3rem !important;
         padding: 0.5rem 1rem !important;
         width: 16rem !important;
         font-size: 0.8rem !important;
+    }
+
+    .user_info_refer_code{
+        font-size: 0.8rem;
+        width: 15rem;
     }
 
     .profile_sec_header_line{
@@ -110,6 +125,11 @@
         margin: 0.3rem !important;
         padding: 0.65rem 2rem !important;
         width: 24rem !important;
+    }
+
+    .user_info_refer_code{
+        font-size: 0.95rem;
+        width: 22rem;
     }
 
     .profile_sec_header_line{

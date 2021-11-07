@@ -24,6 +24,10 @@ const getConsts = (cb)=>{
 
 let Controller = {
 
+    is_profile_completed:false,
+    passed_threshold:true,
+    region:2,
+
     openNotification:null,
 
     onMenu:()=>{},
@@ -41,6 +45,9 @@ let Controller = {
     setNavbar_name:(name)=>{},
 
     setPage: (jsx, index)=>{},
+
+    openAlertModal: (info)=>{},
+
 };
 
 export default Controller;

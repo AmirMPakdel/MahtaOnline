@@ -1,4 +1,4 @@
-const valid_sms_code_length = 5;
+﻿const valid_sms_code_length = 5;
 
 const InputValidator = {
 
@@ -27,8 +27,8 @@ const InputValidator = {
     valid_phone:(phone)=>{
         phone = toS(phone);
 
-        if(!str_eq(phone, 11)){
-            return false
+        if(phone.length < 10){
+            return false;
         }
 
         return true;

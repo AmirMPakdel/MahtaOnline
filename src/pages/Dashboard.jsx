@@ -11,9 +11,14 @@ import Controller from '../Controller';
 import {Route} from 'react-router-dom';
 import {Spin} from 'antd';
 import Loading from '../components/Loading';
-import { setCookie, getCookie } from '../scripts/cookie';
+import { setCookie, getCookie, deleteCookie } from '../scripts/cookie';
 import Purchase from './Purchase';
 import ClassView from './ClassView';
+import TransactionResult from './TransactionResult';
+import TestView from './TestView';
+import Spiner from '../components/Spiner';
+import ScoreSheet from './ScoreSheet';
+import ViewPlan from './ViewPlan';
 
 class Dashboard extends Component {
 
@@ -30,31 +35,77 @@ class Dashboard extends Component {
     }
 
     componentDidMount(){
+        
         Controller.onMenu = this.onMenu;
         Controller.openMenu = this.open_menu;
         Controller.closeMenu = this.close_menu;
         Controller.setNavbar_name = this.setNavbar_name;
         Controller.setPage = this.setPage;
 
-        //TODO: check token then stop loading
-        setCookie("_ca", "811603badafe4360a61c6b85a9c8718c");
-        setCookie("name", "امیرمحمد پاکدل");
-        Controller.setNavbar_name(getCookie("name"));
-        
-        
-        setTimeout(()=>{
-            Controller.getConsts(()=>{
-                this.state.page = <ClassView/>;
-                this.setState(this.state)
-            });
-        }, 200);
+        //TODO:
+        //setCookie("_ca", "c7367fbcae8b3b513e391eb8338c197e", 600);
 
+        let token = getCookie("_ca");
+
+        Server.post_request(Server.urls.CHECK_TOKEN, {token}, (res)=>{
+
+            if(res.result_code == Server.ResultCode.SUCCESS){
+
+                Controller.setNavbar_name(res.data.full_name);
+
+                Controller.is_profile_completed = res.data.is_profile_completed;
+                Controller.passed_threshold = res.data.passed_threshold;
+                Controller.region = res.data.region;
+
+                if(Controller.passed_threshold){
+                    Controller.openAlertModal("به دلیل کامل نبودن مدارک مربوط به پروفایل و سهمیه منطقه شما دسترسی به کلاس ها قطع شده است."+
+                    "\n"+"لطفا پروفایل خود را کامل کنید و مدارک خواسته شده را ارسال نمایید.")
+                }
+
+                // let page = <Profile/>;
+                // let index = 0;
+                // if(Controller.is_profile_completed){
+                //     page = <MyCourses/>;
+                //     index = 2;
+                //}
+                let page = <CategoryList/>;
+                let index = 1;
+
+                let url_arr = window.location.href.split("/");
+                let route_page = url_arr[4];
+                
+                if(route_page == "mytests"){
+                    page = <MyTests/>
+                    index = 5
+                }
+
+                //window.localStorage.setItem("lp_plan_id", 29)
+                let redirect_plan = window.localStorage.getItem("lp_plan_id");
+                if(redirect_plan){
+                    page = <ViewPlan/>;
+                    index = 2;
+                }
+
+                Controller.getConsts(()=>{
+                    this.state.page = page;
+                    this.state.selected_page_index = index;
+                    this.setState(this.state);
+                });
+
+            }else{
+
+                deleteCookie("_ca");
+                setTimeout(()=>{
+                    window.location.href = Server.urls.HOME+"/register";
+                },200)
+            }
+        });
     }
     
     state = {
         user_name:"",
-        selected_page_index : 0,
-        page:<Loading/>,
+        selected_page_index : undefined,
+        page:<Spiner/>,
     }
 
     onNavSelect = (index)=>{
@@ -87,14 +138,15 @@ class Dashboard extends Component {
         this.setState({user_name:name})
     }
 
-    setPage = (jsx, index)=>{
-        this.state.page = jsx;
+    setPage = (jsx, index=this.state.selected_page_index)=>{
         this.state.selected_page_index = index;
+        this.state.page = jsx;
         this.setState(this.state);
     }
 
     exit = ()=>{
-        //TODO:: exit?!
+        setCookie("_ca","", ((((1/ 24)/60)/60)/1000));
+        window.location.href = Server.urls.HOME;
     }
 
     render() {
@@ -142,7 +194,8 @@ function NavGap(props){
 }
 
 function NavSec(props){
-
+    console.log("selected index ="+props.selected);
+    
     let t_color = "white";
     let con_bg = "rgba(0,49,89,1)";
     let gap_radius = "0rem 0rem 0rem 0rem";
@@ -189,5 +242,6 @@ function NavSec(props){
         </React.Fragment>
     )
 }
+
 
 export default Dashboard

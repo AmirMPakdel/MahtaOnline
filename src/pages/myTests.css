@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 3.5rem;
+    padding-bottom: 3rem;
 }
 
 #mytests_title{
@@ -37,6 +38,124 @@
     background-color: gold;
 }
 
+.myTest_part_title{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.myTest_card_con{
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    border: 0.2rem solid black;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.18);
+}
+
+.myTest_card_title{
+    width: 45%;
+    font-size: 0.9rem;
+    direction: rtl;
+    text-align: right;
+    padding: 1rem;
+}
+
+.myTest_card_info_con{
+    display: flex;
+    flex-direction: column;
+}
+
+.myTest_card_info_row{
+    display: flex;
+    direction: rtl;
+    padding: 0.2rem 0;
+    margin: 0.2rem 0;
+    align-items: center;
+    padding-left: 0.6rem;
+}
+
+.myTest_card_info_img{
+    width: 1.2rem;
+    height: auto;
+    max-height: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.myTest_card_info_text{
+    display: flex;
+    font-size: 0.9rem;
+}
+
+.myTest_card_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 2rem;
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 400;
+    bottom: -1rem;
+    right: 2rem;
+    cursor: pointer;
+    width: 16rem;
+    height: 2rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.3);
+}
+
+.myTest_space1{
+    width: 0;
+    height: 0;
+    margin-top: 2rem;
+}
+
+.myTest_card_button2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 100%;
+    width: 50%;
+}
+
+.myTest_card_button1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+#mytexts_filter_sec{
+    width: 80%;
+    height: 0.5rem;
+    direction: ltr;
+}
+
+#mytexts_filter_btn{
+    position: relative;
+    background-color: rgb(0,49,89);
+    color: white;
+    border-radius: 0.8rem;
+    width: 10rem;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
 @media(max-width:768px){
     #mytests_title{
         display: flex;
@@ -57,6 +176,59 @@
         width: 1.2rem;
         margin-left: 1rem;
     }
+
+    .myTest_part_title{
+        font-weight: 500;
+    }
+    
+    .myTest_card_con{
+        flex-direction: column;
+        padding-bottom: 2rem;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    .myTest_card_title{
+        width: 100%;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .myTest_card_info_con{
+        padding: 0;
+    }
+    
+    .myTest_card_info_img{
+        width: 1.1rem;
+        height: auto;
+        max-height: 1.1rem;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    }
+    
+    .myTest_card_info_text{
+        display: flex;
+        font-size: 0.8rem;
+        margin-left: 1rem;
+    }
+    
+    .myTest_card_button{
+        bottom: -1rem;
+        right: unset;
+        font-size: 1rem;
+        align-self: center;
+        cursor: pointer;
+        font-size: 0.85rem;
+    }
+}
+
+#myTest_part_no_test{
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 80%;
+    opacity: 0.7;
+    text-align: center;
+    margin-top: 8rem;
 }
 
 @media(min-width:769px) and (max-width:1199px){
@@ -76,6 +248,47 @@
     .mytests_alert_lable{
         width: 1.2rem;
         margin-left: 1rem;
+    }
+    .myTest_part_title{
+        font-weight: 500;
+    }
+    
+    .myTest_card_con{
+        flex-direction: column;
+        padding-bottom: 2rem;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    .myTest_card_title{
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .myTest_card_info_con{
+        padding: 0;
+    }
+    
+    .myTest_card_info_img{
+        width: 1.2rem;
+        height: auto;
+        max-height: 1.2rem;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    }
+    
+    .myTest_card_info_text{
+        display: flex;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+    }
+    
+    .myTest_card_button{
+        bottom: -1rem;
+        right: unset;
+        align-self: center;
+        cursor: pointer;
     }
 }
 
